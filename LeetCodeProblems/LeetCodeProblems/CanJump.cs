@@ -15,16 +15,9 @@ namespace LeetCodeProblems
         /// </summary>
         public static bool CanJumpToEnd(int[] nums)
 		{
-            Dictionary<int, bool> isIndexAccessible = new Dictionary<int, bool>()
-            {
-                { 0, true} // start at first space, so it's always accessible 
-            };
+            bool[] isIndexAccessible = new bool[nums.Length];
+            isIndexAccessible[0] = true;
             
-            for(int n = 1; n < nums.Length; n++)
-            {
-                isIndexAccessible.Add(n, false);
-            }
-
             int i = 0;
 
             while(i < nums.Length && isIndexAccessible[i])

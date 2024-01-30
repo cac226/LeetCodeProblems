@@ -18,10 +18,10 @@ namespace LeetCodeProblems
 			{
 				if (!numToFrequency.ContainsKey(nums[i]))
 				{
-					numToFrequency.Add(nums[i], 0);
-				}
-
-				numToFrequency[nums[i]]++;
+					numToFrequency.Add(nums[i], 1);
+				} else {
+                    numToFrequency[nums[i]]++;
+                }
 
 				if (numToFrequency[nums[i]] >= majorityElementFrequencyMinimum)
 				{

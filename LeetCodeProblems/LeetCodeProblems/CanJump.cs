@@ -15,26 +15,22 @@ namespace LeetCodeProblems
         /// </summary>
         public static bool CanJumpToEnd(int[] nums)
 		{
-            bool[] isIndexAccessible = new bool[nums.Length];
-            isIndexAccessible[0] = true;
-            
-            int i = 0;
-
-            while(i < nums.Length && isIndexAccessible[i])
+            if (nums.Length <= 1)
             {
-                int jumpDistanceFromPosition = nums[i];
-
-                int maxJumpPosition = Math.Min(nums.Length - 1, i + jumpDistanceFromPosition);
-
-                for(int j = i + 1; j <= maxJumpPosition; j++)
-                {
-                    isIndexAccessible[j] = true;
-                }
-
-                i++;
+                return true;
             }
 
-            return isIndexAccessible[nums.Length - 1];
+            int targetIndex = nums.Length - 1;
+
+            for(int i = nums.Length - 2; i >= 0; i--)
+            {
+                if (targetIndex <= nums[i] + i)
+                {
+                    targetIndex = i;
+                }
+            }
+
+            return targetIndex == 0;
 		}
 	}
 }

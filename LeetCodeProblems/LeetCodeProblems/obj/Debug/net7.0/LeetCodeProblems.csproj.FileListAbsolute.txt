@@ -1,0 +1,15 @@
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/bin/Debug/net7.0/LeetCodeProblems
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/bin/Debug/net7.0/LeetCodeProblems.deps.json
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/bin/Debug/net7.0/LeetCodeProblems.runtimeconfig.json
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/bin/Debug/net7.0/LeetCodeProblems.dll
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/bin/Debug/net7.0/LeetCodeProblems.pdb
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/obj/Debug/net7.0/LeetCodeProblems.csproj.AssemblyReference.cache
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/obj/Debug/net7.0/LeetCodeProblems.GeneratedMSBuildEditorConfig.editorconfig
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/obj/Debug/net7.0/LeetCodeProblems.AssemblyInfoInputs.cache
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/obj/Debug/net7.0/LeetCodeProblems.AssemblyInfo.cs
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/obj/Debug/net7.0/LeetCodeProblems.csproj.CoreCompileInputs.cache
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/obj/Debug/net7.0/LeetCodeProblems.dll
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/obj/Debug/net7.0/refint/LeetCodeProblems.dll
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/obj/Debug/net7.0/LeetCodeProblems.pdb
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/obj/Debug/net7.0/LeetCodeProblems.genruntimeconfig.cache
+/Users/caitlincampbell/Documents/GitHub/LeetCodeProblems/LeetCodeProblems/LeetCodeProblems/obj/Debug/net7.0/ref/LeetCodeProblems.dll

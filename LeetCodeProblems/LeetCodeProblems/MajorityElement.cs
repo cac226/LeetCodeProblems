@@ -29,7 +29,7 @@ namespace LeetCodeProblems
 				}
 			}
 
-			return -1;
+			return nums.First();
         }    
 	}
 }

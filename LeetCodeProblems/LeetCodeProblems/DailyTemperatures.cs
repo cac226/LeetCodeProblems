@@ -15,23 +15,38 @@ namespace LeetCodeProblems
         public static int[] DaysToWarmerTemperature(int[] temperatures)
 		{
 			int[] result = new int[temperatures.Length];
-
-			for (int i = 0; i < temperatures.Length; i++)
+			int i = 0;
+			while(i < temperatures.Length)
 			{
 				int j = i + 1;
+				int daysWithSameTemp = 1;
+				bool sameTempInARow = true;
 
 				while (j < temperatures.Length && temperatures[j] <= temperatures[i])
 				{
+					if (sameTempInARow && temperatures[i] == temperatures[j])
+					{
+						daysWithSameTemp++;
+					} else
+					{
+						sameTempInARow = false;
+                    }
 					j++;
 				}
 
 				if (j < temperatures.Length)
 				{
-                    result[i] = j - i;
+					int startingDay = i;
+					while(i < startingDay + daysWithSameTemp)
+					{
+                        result[i] = j - i;
+						i++;
+                    }
 				} else
 				{
                     result[i] = 0;
-				}
+                    i++;
+                }
 			}
 			return result;
 		}

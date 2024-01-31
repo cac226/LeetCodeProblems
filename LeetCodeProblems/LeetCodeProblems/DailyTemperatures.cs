@@ -19,17 +19,24 @@ namespace LeetCodeProblems
 			while(i < temperatures.Length)
 			{
 				int j = i + 1;
-				int daysWithSameTemp = 1;
-				bool sameTempInARow = true;
+
+                // If it's the same temperature for several days in a row, then
+                // we can note how many days in a row the temperature stays the same
+				// to make calculation faster.
+				// This particular method only works with adjasent matching temperatures
+				// (i.e. not 90, 90, 89, 90), so we need a boolean marker to determine if
+				// we're still in a valid state to make the necessary calculations
+                int daysWithSameTemp = 1;
+				bool sameTemperatureAdjasentMarker = true; 
 
 				while (j < temperatures.Length && temperatures[j] <= temperatures[i])
 				{
-					if (sameTempInARow && temperatures[i] == temperatures[j])
+					if (sameTemperatureAdjasentMarker && temperatures[i] == temperatures[j])
 					{
 						daysWithSameTemp++;
 					} else
 					{
-						sameTempInARow = false;
+						sameTemperatureAdjasentMarker = false;
                     }
 					j++;
 				}

@@ -1,6 +1,6 @@
 ﻿
 using LeetCodeProblems;
 
-var result = SequentialDigits.getAllSeuqntialDigitsOfLength(5);
+var result = SequentialDigits.GetSequentialDigitsInRange(100, 300);
 
 Console.WriteLine(result);

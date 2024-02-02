@@ -5,33 +5,22 @@ namespace LeetCodeProblems
 	{
         public static IList<int> GetSequentialDigitsInRange(int low, int high)
         {
-            List<int> result = new List<int>();
+            List<int> allSequentialDigits = new List<int>();
 
-            int temp = getNextSequentialDigitNumber(low);
+            int lowDigitCount = low.ToString().Length;
+            int highDigitCount = high.ToString().Length;
+
+            for(int i = lowDigitCount; i <= highDigitCount; i++)
+            {
+                allSequentialDigits.AddRange(getAllSeuqntialDigitsOfLength(i));
+            }
+
+            // If I wanted to make this more efficient (but spend more time writing it)
+            // I wouldn't use LINQ 
+            List<int> result = allSequentialDigits.Where(x => low <= x && x <= high)
+                                                  .ToList();
 
             return result;
-        }
-
-        private static int getNextSequentialDigitNumber(int num)
-        {
-            int numDigits = num.ToString().Length;
-            int firstDigit = num / ((int)Math.Pow(10, numDigits));
-
-            if(isValidStartingDigit(firstDigit, numDigits))
-            {
-                int numWithSameStartingDigit = getSequentialDigit(firstDigit, numDigits);
-                if(num < numWithSameStartingDigit)
-                {
-                    return numWithSameStartingDigit;
-                }
-            }
-
-            if(isValidStartingDigit(firstDigit + 1, numDigits))
-            {
-                return getSequentialDigit(firstDigit + 1, numDigits);
-            }
-
-            return -1;
         }
 
         private static List<int> getAllSeuqntialDigitsOfLength(int length)
@@ -44,11 +33,6 @@ namespace LeetCodeProblems
             }
 
             return result;
-        }
-
-        private static bool isValidStartingDigit(int startingDigit, int length)
-        {
-            return startingDigit + length <= 10;
         }
 
         private static int getSequentialDigit(int startingDigit, int length)

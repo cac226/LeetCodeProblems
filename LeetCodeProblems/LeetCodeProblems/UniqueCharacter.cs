@@ -3,17 +3,6 @@ namespace LeetCodeProblems
 {
 	public class UniqueCharacter
 	{
-		private struct LetterInfo
-		{
-			public readonly char letter;
-			public readonly int firstOccurance;
-
-            public LetterInfo(char letter, int firstOccurance)
-            {
-                this.letter = letter;
-                this.firstOccurance = firstOccurance;
-            }
-        }
 		public static int FirstUniqueCharacter(string s)
 		{
 			Dictionary<char, int> letterIndexLookup = new Dictionary<char, int>();

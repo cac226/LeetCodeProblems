@@ -1,6 +1,6 @@
 ﻿
 using LeetCodeProblems;
 
-var result = SequentialDigits.GetSequentialDigitsInRange(100, 300);
+var result = UniqueCharacter.FirstUniqueCharacter("lovely");
 
 Console.WriteLine(result);

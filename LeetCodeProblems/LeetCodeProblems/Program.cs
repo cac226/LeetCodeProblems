@@ -1,5 +1,5 @@
 ﻿
 using LeetCodeProblems;
 
-var result = MedianSortedArrays.FindMedianSortedArrays(new int[] { 1, 3 }, new int[] { });
+var result = Exponents.MyPow(2, 3);
 Console.WriteLine(result);

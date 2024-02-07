@@ -1,5 +1,5 @@
 ﻿
 using LeetCodeProblems;
 
-var result = Exponents.MyPow(2, -2);
+var result = Anagrams.IsAnagram("abcde", "edcba");
 Console.WriteLine(result);

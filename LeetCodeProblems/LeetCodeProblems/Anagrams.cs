@@ -1,8 +1,9 @@
 ﻿using System;
 namespace LeetCodeProblems
 {
-	public class GroupAnagramsClass
+	public class Anagrams
 	{
+        #region Group Anagrams
         public static IList<IList<string>> GroupAnagrams(string[] strs)
         {
             Dictionary<string, IList<string>> anagramLookup = new Dictionary<string, IList<string>>();
@@ -25,6 +26,13 @@ namespace LeetCodeProblems
         {
             return String.Concat(str.OrderBy(c => c));
         }
+        #endregion
+
+        #region Valid Anagram
+
+
+
+        #endregion
     }
 }
 

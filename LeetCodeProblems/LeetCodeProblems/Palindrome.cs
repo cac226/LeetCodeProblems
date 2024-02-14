@@ -18,10 +18,15 @@ namespace LeetCodeProblems
 
         private static bool isPalindrome(string str)
         {
-            IEnumerable<char> strArr = str.ToCharArray();
-            IEnumerable<char> reverseStr = str.Reverse();
+            for(int i = 0; i < str.Length / 2; i++)
+            {
+                if (str[i] != str[str.Length - i - 1])
+                {
+                    return false;
+                }
+            }
 
-            return Enumerable.SequenceEqual(strArr, reverseStr);
+            return true;
         }
     }
 }

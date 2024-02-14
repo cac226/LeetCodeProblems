@@ -1,6 +1,5 @@
 ﻿
 using LeetCodeProblems;
 
-int[] nums = new int[] { 1, 1, 1, 2, 3, 3, 3 };
-var result = RemoveDuplicatesClass.RemoveDuplicates(nums);
+var result = Palindrome.FirstPalindrome(new string[] { "abc", "car", "ada", "racecar", "cool" });
 Console.WriteLine(result);

@@ -1,5 +1,5 @@
 ﻿
 using LeetCodeProblems;
 
-var result = Parentheses.GenerateParenthesis(3);
+var result = PhoneNumbers.LetterCombinations("23");
 Console.WriteLine(result);

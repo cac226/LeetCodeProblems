@@ -1,5 +1,5 @@
 ﻿
 using LeetCodeProblems;
 
-var result = Palindrome.FirstPalindrome(new string[] { "abc", "car", "ada", "racecar", "cool" });
+var result = RemovingElements.FindLeastNumOfUniqueInts(new int[] { 5, 5, 4 }, 2);
 Console.WriteLine(result);

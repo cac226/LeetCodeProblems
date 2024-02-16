@@ -10,7 +10,7 @@ namespace LeetCodeProblems
         /// <param name="arr"></param>
         /// <param name="k"></param>
         /// <returns></returns>
-        public static  int FindLeastNumOfUniqueInts(int[] arr, int k)
+        public static int FindLeastNumOfUniqueInts(int[] arr, int k)
         {
             List<int> distinctIntOccurances = arr.GroupBy(x => x)
                                                 .Select(x => x.Count())

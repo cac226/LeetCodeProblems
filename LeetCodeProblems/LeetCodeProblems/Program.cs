@@ -1,5 +1,5 @@
 ﻿
 using LeetCodeProblems;
 
-var result = RemovingElements.FindLeastNumOfUniqueInts(new int[] { 5, 5, 4 }, 2);
+var result = RomanNumerals.RomanToInt("LVIII");
 Console.WriteLine(result);

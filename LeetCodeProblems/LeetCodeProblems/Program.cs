@@ -1,5 +1,5 @@
 ﻿
 using LeetCodeProblems;
 
-var result = RomanNumerals.RomanToInt("LVIII");
+var result = RomanNumerals.IntToRoman(58);
 Console.WriteLine(result);

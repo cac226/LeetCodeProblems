@@ -45,6 +45,12 @@ namespace LeetCodeProblems
 
             return x * myPowRecursive(x, n - 1);
         }
+
+        public static bool IsPowerOfTwo(int n)
+        {
+            double logn = Math.Log2(n);
+            return logn % 1 < double.Epsilon;
+        }
     }
 }
 

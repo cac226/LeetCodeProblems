@@ -1,5 +1,5 @@
 ﻿
 using LeetCodeProblems;
 
-var result = PhoneNumbers.LetterCombinations("23");
+var result = Exponents.IsPowerOfTwo(6);
 Console.WriteLine(result);

@@ -1,5 +1,5 @@
 ﻿
 using LeetCodeProblems;
 
-var result = Exponents.IsPowerOfTwo(6);
+var result = MissingNumberClass.MissingNumber(new int[] { 0, 1 });
 Console.WriteLine(result);

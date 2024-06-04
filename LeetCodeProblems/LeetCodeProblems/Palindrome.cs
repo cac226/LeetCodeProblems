@@ -12,31 +12,34 @@ namespace LeetCodeProblems
         /// <returns></returns>
         public static int LongestPalindrome(string s)
         {
-            if(s.Length <= 1)
+            int[] asciiOccurances = new int[128];
+
+            foreach(char c in s)
             {
-                return s.Length;
+                asciiOccurances[c]++;
             }
 
-            string sSorted = String.Concat(s.OrderBy(c => c));
-
-            int charPairCount = 0;
+            int length = 0;
             bool hasSpareChar = s.Length % 2 == 1;
 
-            int index = 0;
-            while(index < sSorted.Length)
+            foreach(int letterCount in asciiOccurances)
             {
-                char c = sSorted[index];
-                int lastIndex = sSorted.LastIndexOf(c);
-                int occurances = lastIndex - index + 1;
-                charPairCount += occurances / 2;
-                if(!hasSpareChar && occurances % 2 == 1)
+                if(letterCount % 2 == 0) // even # of occurances
                 {
+                    length += letterCount;
+                } else // odd # of occurances 
+                {
+                    length += letterCount - 1;
                     hasSpareChar = true;
                 }
-                index += occurances;
             }
 
-            return (charPairCount * 2) + (hasSpareChar ? 1 : 0);
+            if(hasSpareChar)
+            {
+                length++;
+            }
+
+            return length;
         }
 
         public static string FirstPalindrome(string[] words)

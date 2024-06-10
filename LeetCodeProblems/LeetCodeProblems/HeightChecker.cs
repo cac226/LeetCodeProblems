@@ -15,19 +15,38 @@ namespace LeetCodeProblems
 		ith student in line (0-indexed).
 
 		Return the number of indices where heights[i] != expected[i].
+
+		
+		1 <= heights.length <= 100
+		1 <= heights[i] <= 100
+
 		 */
         public static int CheckHeight(int[] heights)
 		{
-			int nonmatching = 0;
-			int[] heightsSorted = heights.Order().ToArray();
+			int[] heightOccurances = new int[101];
 
 			for(int i = 0; i < heights.Length; i++)
 			{
-				if (heights[i] != heightsSorted[i])
+				int val = heights[i];
+				heightOccurances[val]++;
+			}
+
+            int nonmatching = 0;
+			int index = 0;
+
+            for (int heightVal = 1; heightVal < heightOccurances.Length; heightVal++)
+			{
+				while (heightOccurances[heightVal] > 0)
 				{
-					nonmatching++;
+					if (heights[index] != heightVal)
+					{
+						nonmatching++;
+					}
+					index++;
+					heightOccurances[heightVal]--;
 				}
 			}
+
 			return nonmatching;
 		}
 	}

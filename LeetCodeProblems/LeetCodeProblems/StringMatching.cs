@@ -32,25 +32,23 @@ namespace LeetCodeProblems
                 return false;
             }
 
-            int[] letterCount1 = new int[26];
-            int[] letterCount2 = new int[26];
+            // words contain only lowercase english letters
+            int[] letters1 = new int[26]; 
+            int[] letters2 = new int[26];
 
             for(int i = 0; i < word1.Length; i++)
             {
-                int letter1Index = word1[i] - 'a';
-                int letter2Index = word2[i] - 'a';
-                letterCount1[letter1Index]++;
-                letterCount2[letter2Index]++;
+                letters1[word1[i] - 'a']++;
+                letters2[word2[i] - 'a']++;
             }
 
             List<int> mismatched1 = new List<int>();
             List<int> mismatched2 = new List<int>();
 
-
-            for(int i = 0; i < letterCount1.Length; i++)
+            for(int i = 0; i < letters1.Length; i++)
             {
-                int count1 = letterCount1[i];
-                int count2 = letterCount2[i];
+                int count1 = letters1[i];
+                int count2 = letters2[i];
                 if (count1 != count2)
                 {
                     if (count1 == 0 || count2 == 0)
@@ -67,7 +65,3 @@ namespace LeetCodeProblems
         }
     }
 }
-
-//aaabbbbccddeeeeefffff
-//aaaaabbcccdddeeeeffff
-
